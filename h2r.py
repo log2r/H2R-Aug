@@ -14,6 +14,7 @@ from hamer.models import DEFAULT_CHECKPOINT
 from modules.detect import Detector
 from modules.remove import Remover
 from modules.retarget import Retargetor
+import argparse
 
 @dataclass
 class ImageCutConfig:
@@ -74,6 +75,8 @@ class H2R():
         return True
 
 if __name__ == "__main__":
-    cfg = ImageCutConfig
-    h2r = H2R(cfg)
-    h2r('examples/images/19.jpg')
+    h2r = H2R(ImageCutConfig())
+    parser = argparse.ArgumentParser(description="H2R Image Processing")
+    parser.add_argument('image_path', type=str, help='Path to the input image')
+    args = parser.parse_args()
+    h2r(args.image_path)
