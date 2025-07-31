@@ -1,0 +1,6 @@
+[submodule "third_party/hamer"]
+	path = third_party/hamer
+	url = https://github.com/geopavlakos/hamer.git
+[submodule "third_party/Inpaint-Anything"]
+	path = third_party/Inpaint-Anything
+	url = https://github.com/geekyutao/Inpaint-Anything.git
